@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Universal styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,134 @@
 :root {
   --bg-color: #fdfdfd;
   --text-color: #333;
-  --main-color: #754ef9;
+  --primary-color: #754ef9;
   --white-color: #fdfdfd;
   --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Headers styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  background: yellowgreen;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: auto;
+}
+
+/* Navbar styles */
+.navbar a {
+  position: relative;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  font-weight: 500;
+  margin-right: 3rem;
+}
+.navbar a.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 0.2rem;
+  background: var(--white-color);
+}
+
+/* Dark mode icon styles */
+#darkMode-icon {
+  font-size: 2.4rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* Body styles */
+section {
+  min-height: 100vh;
+  padding: 10rem 7% 2rem;
+}
+
+/* Home section styles */
+.home {
+  display: flex;
+  align-items: center;
+}
+
+.home .home-content {
+  max-width: 44rem;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 0.3;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+.home-content .socialMedia a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  color: var(--primary-color);
+  margin: 2.5rem 1.5rem 3rem 0;
+  transition: 0.7s ease;
+}
+
+.home-content .socialMedia a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: var(--primary-color);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  font-size: 1.6rem;
+  color: var(--white-color);
+  letter-spacing: 0.1;
+  font-weight: 600;
+  border: 0.2rem solid transparent;
+  transition: 0.7s ease;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
