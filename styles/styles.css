@@ -30,6 +30,10 @@ body {
   color: var(--text-color);
 }
 
+span {
+  color: var(--primary-color);
+}
+
 /* Headers styles */
 .header {
   position: fixed;
@@ -37,11 +41,18 @@ body {
   left: 0;
   width: 100%;
   padding: 2rem 7%;
-  background: yellowgreen;
+  background: transparent;
   display: flex;
   align-items: center;
   z-index: 100;
+  transition: 0.5s;
 }
+
+.header.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 0.1rem 1rem var(--shadow-color);
+}
+
 .logo {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -57,6 +68,15 @@ body {
   font-weight: 500;
   margin-right: 3rem;
 }
+
+.header.sticky .navbar a {
+  color: var(--text-color);
+}
+
+.header.sticky .navbar a.active {
+  color: var(--primary-color);
+}
+
 .navbar a.active::before {
   content: "";
   position: absolute;
@@ -67,11 +87,21 @@ body {
   background: var(--white-color);
 }
 
+.header.sticky .navbar a::before {
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
 /* Dark mode icon styles */
 #darkMode-icon {
   font-size: 2.4rem;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.header.sticky #darkMode-icon {
+  color: var(--text-color);
+  opacity: 0.9;
 }
 
 /* Body styles */
@@ -106,30 +136,10 @@ section {
   font-size: 1.6rem;
 }
 
-.home-content .socialMedia a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
-  width: 4rem;
-  height: 4rem;
-  background: transparent;
-  border: 0.2rem solid var(--primary-color);
-  border-radius: 50%;
-  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-  color: var(--primary-color);
-  margin: 2.5rem 1.5rem 3rem 0;
-  transition: 0.7s ease;
-}
-
-.home-content .socialMedia a:hover {
-  background: var(--primary-color);
-  color: var(--white-color);
-}
-
 .btn {
   display: inline-block;
   padding: 1.2rem 2.8rem;
+  margin-top: 1rem;
   background: var(--primary-color);
   border-radius: 0.6rem;
   box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
@@ -145,4 +155,145 @@ section {
   background: transparent;
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+/* skills styles */
+.skills-container {
+  overflow: hidden;
+  position: absolute;
+  top: 41%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 768px;
+  height: 768px;
+  pointer-events: none;
+}
+
+.skills-container .skills-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 768px;
+  height: 768px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .skills-box .skills {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--primary-color);
+  transform: rotate(calc(360deg / 5 * var(--i)));
+  transform-origin: 384px;
+  background: var(--bg-color);
+  padding: 13px 0;
+}
+
+.home .skills-box .skills:nth-child(1)i {
+  margin-left: 10px;
+}
+
+.home .skills-box .skills:nth-child(2)i,
+.home .skills-box .skills:nth-child(5)i {
+  padding-bottom: 20px;
+}
+
+.home .skills i {
+  font-size: 3.8rem;
+}
+
+.home .skills h3 {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.home .skills-box .circle {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+}
+
+.home .skills-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 384px solid var(--primary-color);
+  border-right: 384px solid var(--primary-color);
+  border-bottom: 384px solid var(--primary-color);
+  border-left: 384px solid transparent;
+}
+
+.home-image img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  pointer-events: none;
+}
+
+/* About section styles */
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.about-img img {
+  width: 35vw;
+  border-radius: 5px;
+}
+
+.about-content {
+  margin-left: 5rem;
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.socialMedia a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  color: var(--primary-color);
+  margin: 0.2rem;
+  transition: 0.7s ease;
+}
+
+.socialMedia a:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
 }
