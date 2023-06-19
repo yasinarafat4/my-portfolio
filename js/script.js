@@ -37,3 +37,35 @@ window.onscroll = () => {
   menuIcon.classList.remove("bx-x");
   navbar.classList.remove("active");
 };
+
+// dark and light mode //
+let dartModeIcon = document.querySelector("#darkMode-icon");
+
+dartModeIcon.onclick = () => {
+  dartModeIcon.classList.toggle("bx-sun");
+  document.body.classList.toggle("dark-mode");
+};
+
+// scroll reveal animation
+ScrollReveal({
+  reset: true,
+  distance: "80px",
+  duration: 1500,
+  delay: 200,
+});
+
+ScrollReveal().reveal(".home-content, .heading, .footer", {
+  origin: "top",
+});
+
+ScrollReveal().reveal(".home-image img, .projects-box, .contact form", {
+  origin: "bottom",
+});
+
+ScrollReveal().reveal(".home-content h1, .about-img img", {
+  origin: "left",
+});
+
+ScrollReveal().reveal(".home-content h3, .home-content p,.about-content", {
+  origin: "right",
+});
