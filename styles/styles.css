@@ -425,3 +425,39 @@ section {
 .contact form .btn {
   cursor: pointer;
 }
+
+/* Footer section styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 7%;
+  background: var(--primary-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+  color: var(--white-color);
+}
+
+.go-top-icon a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--primary-color);
+  outline: 0.2rem solid transparent;
+}
+
+.go-top-icon a:hover {
+  outline-color: var(--white-color);
+  transition: 0.5s ease;
+}
+
+.go-top-icon a i {
+  font-size: 3rem;
+  color: var(--text-color);
+}
