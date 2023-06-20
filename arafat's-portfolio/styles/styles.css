@@ -390,11 +390,70 @@ section {
 
 .about-content h3 {
   font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
 .about-content p {
   font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.badge-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 3px;
+}
+
+.badge {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.badge.js {
+  background-color: #f0db4f;
+}
+
+.badge.react {
+  background-color: #61dafb;
+}
+
+.badge.node {
+  background-color: #68a063;
+}
+
+.badge.express {
+  background-color: #000000;
+}
+
+.badge.mongo {
+  background-color: #4db33d;
+}
+
+.badge.router {
+  background-color: #cecece;
+}
+
+.badge.firebase {
+  background-color: #ffcb2b;
+}
+
+.badge.stripe {
+  background-color: #6772e5;
+}
+
+.badge.jwt {
+  background-color: #385f93;
+}
+
+.badge.tailwind {
+  background-color: #38b2ac;
+}
+
+.badge.bootstrap {
+  background-color: #563d7c;
 }
 
 /* Projects section styles */
@@ -642,6 +701,14 @@ section {
   .home-image img {
     display: none;
   }
+
+  .badge-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -768,15 +835,6 @@ section {
     width: 100%;
   }
 
-  .footer {
-    flex-direction: column-reverse;
-  }
-
-  .footer p {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
   .horizontal {
     height: 10rem;
     margin-bottom: 5rem;
@@ -789,6 +847,21 @@ section {
     width: 15rem;
     height: 100%;
     background-color: var(--primary-color);
+  }
+  .badge-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 4px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
   }
 }
 
