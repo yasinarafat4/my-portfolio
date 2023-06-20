@@ -640,6 +640,10 @@ section {
 }
 
 @media (max-width: 950px) {
+  body {
+    margin-left: 2.4rem;
+  }
+
   #menu-icon {
     display: block;
   }
@@ -714,7 +718,7 @@ section {
 
   .horizontal {
     display: block;
-    margin-left: 3rem;
+    margin-left: 1rem;
   }
 
   .about {
@@ -741,7 +745,7 @@ section {
 
   .footer {
     flex-direction: column-reverse;
-    margin-left: 1.5rem;
+    margin-left: 0.4rem;
   }
 
   .footer p {
@@ -751,13 +755,16 @@ section {
 }
 
 @media (max-width: 550px) {
+  body {
+    margin-left: 5.5rem;
+  }
+
   .contact form .input-box input {
     width: 100%;
   }
 
   .footer {
     flex-direction: column-reverse;
-    margin-left: 3rem;
   }
 
   .footer p {
@@ -767,7 +774,6 @@ section {
 
   .horizontal {
     height: 10rem;
-    margin-left: 5.5rem;
     margin-bottom: 5rem;
   }
 
@@ -776,6 +782,42 @@ section {
     content: "";
     position: absolute;
     width: 15rem;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+}
+
+@media (max-width: 320px) {
+  .projects a {
+    display: inline-block;
+    padding: 0.2rem 0.4rem;
+    margin-top: 0.3rem;
+    background: var(--primary-color);
+    border-radius: 0.1rem;
+    box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+    font-size: 0.9rem;
+    color: var(--white-color);
+    font-weight: 400;
+    border: 0.1rem solid var(--white-color);
+    transition: 0.7s ease;
+  }
+
+  .projects a:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .horizontal {
+    height: 8rem;
+    margin-bottom: 5rem;
+  }
+
+  .horizontal::before,
+  .horizontal::after {
+    content: "";
+    position: absolute;
+    width: 10rem;
     height: 100%;
     background-color: var(--primary-color);
   }
