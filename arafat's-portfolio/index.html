@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yasin Portfolio</title>
 
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/favicon.jpg" />
     <!-- box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -17,7 +19,10 @@
   <body>
     <!-- Header Section -->
     <header class="header">
-      <a href="#" class="logo">Arafat'sPortfolio</a>
+      <a href="#" class="logo"
+        ><img src="assets/images/portfolio-logo.png" alt=""
+      /></a>
+
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
@@ -199,22 +204,48 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form
+        action="https://formsubmit.co/mdyasinarafathasib@gmail.com"
+        method="POST"
+      >
         <div class="input-box">
-          <input type="text" placeholder="Your Full Name" />
-          <input type="email" placeholder="Your Email Address" />
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Full Name"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your Email Address"
+          />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Your Mobile Number" />
-          <input type="text" placeholder="Subject" />
+          <input
+            type="number"
+            name="number"
+            required
+            placeholder="Your Mobile Number"
+          />
+          <input type="text" name="subject" required placeholder="Subject" />
         </div>
         <textarea
-          name=""
+          name="message"
+          required
           id=""
           cols="30"
           rows="10"
           placeholder="Type Your Message"
         ></textarea>
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://thanks-page-61b28f.netlify.app/"
+        />
+        <input type="hidden" name="_template" value="table" />
         <input type="submit" value="Send Message" class="btn" />
       </form>
     </section>

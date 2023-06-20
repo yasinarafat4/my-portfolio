@@ -55,8 +55,13 @@ span {
   background: transparent;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   z-index: 100;
   transition: 0.5s;
+}
+
+.header img {
+  height: 5rem;
 }
 
 .header.sticky {
