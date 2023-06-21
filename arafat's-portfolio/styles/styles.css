@@ -322,11 +322,10 @@ section {
   border-left: 384px solid transparent;
 }
 
-.home-image img {
+.animation {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40%;
   pointer-events: none;
 }
 
@@ -698,7 +697,7 @@ section {
     right: -25.5rem;
   }
 
-  .home-image img {
+  .animation {
     display: none;
   }
 
