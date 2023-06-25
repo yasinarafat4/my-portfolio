@@ -329,36 +329,6 @@ section {
   pointer-events: none;
 }
 
-.horizontal {
-  position: relative;
-  height: 15rem;
-  display: none;
-  margin-top: 5rem;
-}
-
-.horizontal::before,
-.horizontal::after {
-  content: "";
-  position: absolute;
-  width: 20rem;
-  height: 100%;
-  background-color: var(--primary-color);
-}
-
-.horizontal::before {
-  top: 0;
-  left: 0;
-  border-top-right-radius: 100rem;
-  border-bottom-right-radius: 100rem;
-}
-
-.horizontal::after {
-  top: 0;
-  right: 0;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
-}
-
 /* About section styles */
 
 .about {
@@ -552,6 +522,24 @@ section {
   color: var(--white-color);
 }
 
+.btn-details {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--primary-color);
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+  color: var(--white-color);
+  letter-spacing: 0.1;
+  font-weight: 600;
+  border: 0.2rem solid transparent;
+  transition: 0.7s ease;
+}
+
+.btn-details:hover {
+  background: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
 /* Contact section styles */
 
 .contact h2 {
@@ -634,6 +622,16 @@ section {
 
 /* RESPONSIVE BREAKPOINTS */
 
+@media (max-width: 1480px) {
+  .md-animation {
+    display: none;
+  }
+
+  .home .home-content {
+    margin-top: 10rem;
+  }
+}
+
 @media (max-width: 1280px) {
   html {
     font-size: 55%;
@@ -651,6 +649,10 @@ section {
   .home .skills-container .overlay {
     right: -9rem;
   }
+
+  .home .home-content {
+    margin-top: 5rem;
+  }
 }
 
 @media (max-width: 1124px) {
@@ -658,12 +660,16 @@ section {
     padding: 2rem 3%;
   }
 
-  .home .skills-container .skills-box {
-    right: -22rem;
-  }
-
   .home .skills-container .overlay {
     right: -15rem;
+  }
+
+  .home .skills-container .skills-box {
+    display: none;
+  }
+
+  .about {
+    margin-top: 10rem;
   }
 }
 @media (max-width: 1040px) {
@@ -689,16 +695,20 @@ section {
     right: -55rem;
   }
 
-  .home .skills-container .skills-box {
-    display: none;
-  }
-
   .home .skills-container .overlay {
     right: -25.5rem;
   }
 
   .animation {
     display: none;
+  }
+
+  .md-animation {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
   }
 
   .badge-container {
@@ -767,7 +777,7 @@ section {
   .home {
     justify-content: center;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 2rem;
     margin-bottom: 0;
   }
 
@@ -787,11 +797,6 @@ section {
     display: none;
   }
 
-  .horizontal {
-    display: block;
-    margin-left: 1rem;
-  }
-
   .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -800,6 +805,10 @@ section {
   .about-img img {
     width: 50vw;
     border-radius: 5px;
+  }
+
+  .about-content {
+    margin-left: 0;
   }
 
   .about-content h2 {
@@ -834,19 +843,6 @@ section {
     width: 100%;
   }
 
-  .horizontal {
-    height: 10rem;
-    margin-bottom: 5rem;
-  }
-
-  .horizontal::before,
-  .horizontal::after {
-    content: "";
-    position: absolute;
-    width: 15rem;
-    height: 100%;
-    background-color: var(--primary-color);
-  }
   .badge-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -883,19 +879,5 @@ section {
     background: var(--white-color);
     color: var(--primary-color);
     border-color: var(--primary-color);
-  }
-
-  .horizontal {
-    height: 8rem;
-    margin-bottom: 5rem;
-  }
-
-  .horizontal::before,
-  .horizontal::after {
-    content: "";
-    position: absolute;
-    width: 10rem;
-    height: 100%;
-    background-color: var(--primary-color);
   }
 }
