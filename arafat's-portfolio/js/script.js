@@ -62,7 +62,7 @@ ScrollReveal().reveal(".animation, .projects-box, .contact form", {
   origin: "bottom",
 });
 
-ScrollReveal().reveal(".home-content h1, .about-img img", {
+ScrollReveal().reveal(".home-content h1, .about-img img, .images", {
   origin: "left",
 });
 

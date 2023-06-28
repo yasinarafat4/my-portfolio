@@ -69,13 +69,6 @@ span {
   box-shadow: 0 0.1rem 1rem var(--shadow-color);
 }
 
-.logo {
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  font-weight: 600;
-  margin-right: auto;
-}
-
 /* Navbar styles */
 .navbar a {
   position: relative;
@@ -650,6 +643,13 @@ section {
   .home .home-content {
     margin-top: 10rem;
   }
+
+  .logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -672,6 +672,14 @@ section {
 
   .home .home-content {
     margin-top: 5rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: auto;
+    margin-left: 4.5rem;
   }
 }
 
@@ -745,13 +753,17 @@ section {
     margin-left: 2.4rem;
   }
 
+  .logo {
+    margin-right: 0;
+  }
+
   #menu-icon {
     display: block;
   }
 
   #darkMode-icon {
     position: absolute;
-    right: 7rem;
+    right: 22rem;
     font-size: 2.6rem;
     color: var(--text-color);
     cursor: pointer;
@@ -777,7 +789,7 @@ section {
   .navbar a {
     display: block;
     font-size: 2rem;
-    margin: 3rem 0;
+    margin: 3rem;
     color: var(--text-color);
   }
 
@@ -861,6 +873,19 @@ section {
 
   .contact form .input-box input {
     width: 100%;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  #darkMode-icon {
+    position: absolute;
+    right: 12.5rem;
+    font-size: 2.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-bottom: 0.1rem;
   }
 
   .badge-container {
